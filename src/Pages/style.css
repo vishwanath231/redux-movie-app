@@ -8,8 +8,8 @@
     margin-bottom: .7rem;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #0D121C;
-    /* color: #FFFFFF; */
+    /* color: #0D121C; */
+    color: #FFFFFF;
 }
 
 .box {
@@ -20,6 +20,17 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.result__box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1rem 0 1rem;
+    text-align: center;
+}
+.boxes{
+    margin: 1rem;
+}
 
 .info__link{
     text-decoration: none;
@@ -75,7 +86,7 @@
 }
 
 .react-multi-carousel-item{
-    padding: 1rem 0;
+    padding: .6rem 0;
 }
 
 

@@ -4,6 +4,7 @@ import PPerson from './Popular_Person/PPerson';
 import PTv from './Popular_TV/PTv';
 import Trending from './Trending/Trending';
 
+
 const Lists = () => {
     return (
         <>
@@ -16,3 +17,6 @@ const Lists = () => {
 }
 
 export default Lists;
+
+
+

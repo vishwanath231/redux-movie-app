@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const PPersonComponent = ({ val }) => {
     return (
         <>
-            <div className="box">
+            {val.profile_path === "" ? null : (
+                <div className="box">
                 <Link to={`/person/${val.name}/${val.id}`} className="info__link">
                     <div className="info__box">
                         <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt=""/>
@@ -14,6 +15,7 @@ const PPersonComponent = ({ val }) => {
                     </div>
                 </Link>
             </div>
+            )}
         </>
     )
 }

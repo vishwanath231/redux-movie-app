@@ -1,15 +1,19 @@
 import React from 'react';
 import Lists from './Pages/Lists';
 import Index from './Components/index';
-
+import styled from 'styled-components';
 
 const Home = () => {
     return (
-        <div>
+        <Container>
             <Index />
             <Lists />
-        </div>
+        </Container>
     )
 }
 
 export default Home;
+
+const Container = styled.div `
+    background: #0C111B;
+`;
