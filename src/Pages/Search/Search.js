@@ -72,7 +72,7 @@ const SearchInfo = () => {
                searchResult.map((val) => (
                     <>
                         <div className="box boxes" key={val.id}>
-                            <Link to={`/movie/${val.original_name}/${val.id}`} className="info__link ">
+                            <Link to={`/movie/${val.id}`} className="info__link ">
                                 <div className="info__box">
                                     {!val.poster_path ? (
                                         <img src={spinner} alt="" />
