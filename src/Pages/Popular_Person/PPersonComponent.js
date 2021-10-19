@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import noProfile from '../noProfile.jpg'
 
 const PPersonComponent = ({ val }) => {
     return (
         <>
-            {val.profile_path === "" ? null : (
+            {val.known_for_department === "Acting" ? (
                 <div className="box">
-                <Link to={`/person/${val.name}/${val.id}`} className="info__link">
+                <Link to={`/person/${val.id}`} className="info__link">
                     <div className="info__box">
                         <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt=""/>
                         <div className="inner__box">
@@ -15,6 +16,12 @@ const PPersonComponent = ({ val }) => {
                     </div>
                 </Link>
             </div>
+            ) : (
+                <div className="box">
+                    <div className="">
+                        <img src={noProfile} alt="" width="170px" height="295px" style={{borderRadius: "6px"}} />
+                    </div>
+                </div>
             )}
         </>
     )

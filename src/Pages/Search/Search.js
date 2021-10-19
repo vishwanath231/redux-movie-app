@@ -5,6 +5,8 @@ import { searchData } from '../../Redux/Actions/MovieAction';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import spinner from '../spinner.gif';
+
 
 
 const SearchInfo = () => {
@@ -69,21 +71,23 @@ const SearchInfo = () => {
             {
                searchResult.map((val) => (
                     <>
-                        {val.length === 0 ? ( <h2>loading....</h2> ) : (
-                            <div className="box boxes" key={val.id}>
-                                <Link to={`/movie/${val.original_name}/${val.id}`} className="info__link ">
-                                    <div className="info__box">
+                        <div className="box boxes" key={val.id}>
+                            <Link to={`/movie/${val.original_name}/${val.id}`} className="info__link ">
+                                <div className="info__box">
+                                    {!val.poster_path ? (
+                                        <img src={spinner} alt="" />
+                                        ) : (
                                         <img src={`https://image.tmdb.org/t/p/w500/${val.poster_path}`} alt=""/>
-                                        <div className="inner__box">
-                                            <p className="titles">{val.original_title ? val.original_title : val.original_name}</p>
-                                            <div className="rate__box" style={{color: val.vote_average > 6 ? "green" : "red" }}>
-                                                <div className="">{val.vote_average}</div>
-                                            </div>
+                                    )}
+                                    <div className="inner__box">
+                                        <p className="titles">{val.original_title ? val.original_title : val.original_name}</p>
+                                        <div className="rate__box" style={{color: val.vote_average > 6 ? "green" : "red" }}>
+                                            <div className="">{val.vote_average}</div>
                                         </div>
                                     </div>
-                                </Link>
-                            </div>
-                        )}
+                                </div>
+                            </Link>
+                        </div>
                     </>
                ))
             }

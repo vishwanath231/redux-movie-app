@@ -5,6 +5,7 @@ import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from '../Carousel_Responsive/Responsive';
 import '../style.css';
+import spinner from '../spinner.gif';
 
 const PMovieListing = () => {
 
@@ -17,7 +18,9 @@ const PMovieListing = () => {
                 <h2>Popular Movies</h2>
                 {
                     pMovies.length === 0 ? (
-                        <h2>loding...</h2>
+                        <div className="spinner">
+                            <img src={spinner} alt=""/>
+                        </div>
                     ) : (
                         <Carousel
                             swipeable={true}
@@ -27,7 +30,9 @@ const PMovieListing = () => {
                             {
                                 pMovies.map((val) => (
                                     <div key={val.id}>
+                                        
                                         <PMovieComponent val={val} />
+                                            
                                     </div>
                                 ))
                             }

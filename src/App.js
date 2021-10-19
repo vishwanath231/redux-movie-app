@@ -15,10 +15,10 @@ const App = () => {
             <Router>
                 <Route exact path="/" component={Login} />
                 <Route path="/Home" component={Home} />
-                <Route path="/movie/:name/:id" component={MovieInfos} />
-                <Route path="/tvShow/:name/:id" component={TvShowInfos} />
-                <Route path="/person/:name/:id" component={PersonInfo} />
-                <Route path="/trending/:name/:id" component={TrendingInfo} />
+                <Route path="/movie/:id" component={MovieInfos} />
+                <Route path="/tvShow/:id" component={TvShowInfos} />
+                <Route path="/person/:id" component={PersonInfo} />
+                <Route path="/trending/:id" component={TrendingInfo} />
                 <Route path="/search/:name" component={Search} />
             </Router>
         </>
