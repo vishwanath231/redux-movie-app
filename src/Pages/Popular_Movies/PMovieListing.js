@@ -26,7 +26,10 @@ const PMovieListing = () => {
                             swipeable={true}
                             draggable={true}
                             responsive={responsive}
-                            keyBoardControl>
+                            ssr={true} // means to render carousel on server-side.
+                            infinite={true}
+                            keyBoardControl
+                            >
                             {
                                 pMovies.map((val) => (
                                     <div key={val.id}>
