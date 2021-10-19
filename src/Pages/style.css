@@ -20,6 +20,7 @@
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.7s all ease;
+    margin: 0 auto;
 }
 .box:hover{
     transform: scale(1.03);
