@@ -1,23 +1,30 @@
 
 .container{
-    padding: 1rem ;
-    margin: 1rem;
+    padding:0 1rem;
+    margin: 0 1rem;
 }
 
 .container h2 {
-    margin-bottom: .7rem;
     font-size: 1.2rem;
     font-weight: 600;
     /* color: #0D121C; */
     color: #FFFFFF;
 }
-
+._box{
+    padding: 1rem .4rem;
+    margin-bottom: 2rem;
+}
 .box {
     background-color: #fff;
     width: 170px;
     text-align: center;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.7s all ease;
+}
+.box:hover{
+    transform: scale(1.03);
+    overflow: hidden;
 }
 
 .result__box{
@@ -34,7 +41,8 @@
 
 .info__link{
     text-decoration: none;
-    outline-color: cornflowerblue;
+    outline: none;
+    border: none;
 }
 
 
@@ -43,7 +51,7 @@
     /* width: 148.344px;
     height: 196.891px; */
     width: 170px;
-    height: 250px;
+    /* height: 250px; */
     border-radius: 6px 6px 0 0;
 }
 
@@ -85,24 +93,9 @@
     text-align: center;
 }
 
-.react-multi-carousel-item{
-    padding: .6rem 0;
-}
 
 
-.react-multi-carousel-list button {
-    background-color: #fff;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    outline-color: cornflowerblue;
-}
 
-.react-multi-carousel-list button:hover {
-    background-color: #fff;
-}
-
-.react-multi-carousel-list .react-multiple-carousel__arrow::before {
-    color: #000;
-}
 
 
 .spinner {

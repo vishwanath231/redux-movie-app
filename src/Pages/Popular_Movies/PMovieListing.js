@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import PMovieComponent from './PMovieComponent';
-// import Carousel from 'react-multi-carousel';
-import "react-multi-carousel/lib/styles.css";
-// import { responsive } from '../Carousel_Responsive/Responsive';
-import '../style.css';
+import Slider from "react-slick";
+import { settings } from '../setting/settings';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import spinner from '../spinner.gif';
+import '../style.css';
 
 const PMovieListing = () => {
 
@@ -22,19 +23,15 @@ const PMovieListing = () => {
                             <img src={spinner} alt=""/>
                         </div>
                     ) : (
-                        
-
-                        <>
+                        <Slider {...settings}>
                             {
                                 pMovies.map((val) => (
-                                    <div key={val.id}>
-                                        
-                                        <PMovieComponent val={val} />
-                                            
+                                    <div className="_box" key={val.id}>
+                                        <PMovieComponent val={val} /> 
                                     </div>
                                 ))
                             }
-                        </>
+                        </Slider>
                     )
                 }
             </div>   

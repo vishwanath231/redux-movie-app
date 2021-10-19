@@ -1,9 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import PPersonComponent from './PPersonComponent';
-import Carousel from 'react-multi-carousel';
-import "react-multi-carousel/lib/styles.css";
-import { responsive } from '../Carousel_Responsive/Responsive';
+import Slider from "react-slick";
+import { settings } from '../setting/settings';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import '../style.css';
 
 const PPersonListing = () => {
@@ -15,19 +16,15 @@ const PPersonListing = () => {
         <div>
             <div className="container">
                 <h2>Popular Person</h2>
-                <Carousel
-                swipeable={true}
-                draggable={true}
-                responsive={responsive}
-                keyBoardControl>
+                <Slider {...settings}>
                     {
                         pPersons.map((val) => (
-                            <div key={val.id}>
+                            <div className="_box" key={val.id}>
                                 <PPersonComponent val={val} />
                             </div>
                         ))
                     }
-                </Carousel>
+                </Slider>
             </div>
         </div>
     )
