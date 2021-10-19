@@ -38,20 +38,15 @@ const Container = styled.div `
         width: 100%;
         height: 100%;
         /* background-color:rgba(14, 21, 58, .5); */
-        background-color: rgba(12, 17, 27, .5);
+        background-color: rgba(12, 17, 27, .7);
 
         z-index: -1;
     }
 
     .content{
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 0 1rem;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        min-height: 50vh;
-        color: #F5F5F5;
+        margin:0 2rem;
+        padding: 4.5rem 0;
+        color: #f5f5f5;
     }
     .content h1{
         font-size: 40px;
@@ -63,7 +58,7 @@ const Container = styled.div `
         padding-bottom: 1.5rem;
     }
     .content .form {
-        width:60%;
+        width:50%;
         display: flex;
         background-color: #fff;
         border-radius: 30px;
