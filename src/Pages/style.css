@@ -1,0 +1,95 @@
+
+.container{
+    padding: 1rem ;
+    margin: 1rem;
+}
+
+.container h2 {
+    margin-bottom: .7rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0D121C;
+    /* color: #FFFFFF; */
+}
+
+.box {
+    background-color: #fff;
+    width: 170px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.info__link{
+    text-decoration: none;
+    outline-color: cornflowerblue;
+}
+
+
+
+.info__box img {
+    /* width: 148.344px;
+    height: 196.891px; */
+    width: 170px;
+    height: 250px;
+    border-radius: 6px 6px 0 0;
+}
+
+.inner__box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.inner__box .titles {
+    width: 60%;
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+    text-align: left;
+}
+
+.inner__box .name {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+    text-align: center;
+}
+
+.inner__box .rate__box {
+    background-color: #0C111B;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 3px;
+    font-size: .9rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.react-multi-carousel-item{
+    padding: 1rem 0;
+}
+
+
+.react-multi-carousel-list button {
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    outline-color: cornflowerblue;
+}
+
+.react-multi-carousel-list button:hover {
+    background-color: #fff;
+}
+
+.react-multi-carousel-list .react-multiple-carousel__arrow::before {
+    color: #000;
+}
+

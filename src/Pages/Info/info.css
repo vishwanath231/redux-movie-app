@@ -1,0 +1,200 @@
+body {
+    /* background: #fff; */
+    background: #282C34;
+}
+
+.info__container{
+    max-width: 1140px;
+    padding: 0 1rem;
+    margin: 2rem auto;
+}
+
+.home{
+    font-family: 'Sen',sans-serif;
+    outline-color: cornflowerblue;
+    border: none;
+    padding: .6rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #161D2D;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.info__box h3{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0;
+    color: #fff;
+}
+
+.info__flex{
+    margin: 1rem 0;
+}
+
+
+.movieInfo__details{
+    margin: 0;
+}
+
+.info__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 .8rem 0;
+}
+.info__list h2{
+    color: #DC143C;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.info__list p,
+.info__list span{
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 .5rem;
+}
+
+.overview h2{
+    color: #DC143C;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.overview p {
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+
+.btns {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.btns .goHome,
+.btns .view__imdb{
+    font-family: 'Sen',
+    sans-serif;
+    outline-color: cornflowerblue;
+    border: none;
+    padding: .6rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #009f4d;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btns .view__imdb{
+    background-color:#008eaa;
+    margin-left: 10px;
+}
+
+
+
+
+.youtube_video__title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 2rem 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+.youtube__video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.video__box{
+    margin: 1rem;
+}
+.video__box iframe {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 6px;
+    background-color: #161D2D;
+}
+.ytp-error-icon-container {
+    display: none;
+}
+
+
+.season__title{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 2rem 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+.season__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.season__container img {
+    width: 170px;
+    border-radius: 6px 6px 0 0;
+}
+
+.season__box {
+    margin: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 6px;
+}
+
+.season__box p {
+    text-align: center;
+    color: #fff;
+    margin: .4rem 0;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+
+@media(min-width:768px){
+    .info__flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .movieInfo__details{
+        margin: 0 1rem;
+    }
+    .info__flex {
+        margin: 1rem 0;
+    }
+
+    .video__box iframe {
+        width: 500px;
+    }
+
+    .info__box h3 {
+        font-size: 3rem;
+    }
+
+    
+    
+}
+
+@media(max-width:768px){
+    .video__box {
+        width: 100%;
+        margin: 0;
+    }
+}
