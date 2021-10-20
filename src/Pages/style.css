@@ -1,7 +1,7 @@
 
 .container{
     padding:0 1rem;
-    margin:2.5rem 1rem;
+    margin: 2rem 0 0 0;
 }
 
 .container h2 {
@@ -11,7 +11,7 @@
     color: #FFFFFF;
 }
 ._box{
-    padding: 1rem .4rem;
+    padding: 1rem 0;
 }
 .box {
     background-color: #fff;
@@ -20,7 +20,7 @@
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.7s all ease;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 .box:hover{
     transform: scale(1.03);
@@ -97,10 +97,58 @@
 
 
 
+.slick-prev{
+    left: 0;
+    z-index: 999;
+}
+.slick-next{
+    right: 0;
+}
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+   
+ background: transparent;
+}
 
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 40px;
+    width: 50px;
+    line-height: 1;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .spinner {
     text-align: center;
 }
 .spinner img {
     width:50px;
+}
+
+
+
+@media(max-width:600px) {
+    .box {
+        width: 150px;
+    }
+
+    .info__box img {
+        width: 150px;
+        height: auto;
+    }
 }

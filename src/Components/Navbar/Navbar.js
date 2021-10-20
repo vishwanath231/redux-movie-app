@@ -80,7 +80,11 @@ const Navabr = styled.div `
         top: 0;
         width: 100%;
         z-index: 9999;
-        padding: 10px 38px 5px 38px;
+        padding: 10px 10px 5px 10px;
+
+        @media(min-width:768px){
+            padding: 10px 30px 5px 30px;
+        }
     }
     .navbar.scroll {
         background: #131A27;

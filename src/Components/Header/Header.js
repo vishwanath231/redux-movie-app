@@ -44,9 +44,13 @@ const Container = styled.div `
     }
 
     .content{
-        margin:0 2rem;
+        margin:0 10px;
         padding: 4.5rem 0;
         color: #f5f5f5;
+
+        @media(min-width:768px){
+            margin: 0 30px;
+        }
     }
     .content h1{
         font-size: 40px;
