@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch } from 'react-redux'; 
 import { trendingInfo, genresInfo, languagesInfo } from '../../../Redux/Actions/InfoAction';
+import { video } from '../../../Redux/Actions/VideoAction';
 import TrendingInfoComps from './TrendingInfoComps';
 import '../info.css';
 
@@ -28,6 +29,20 @@ const TrendingInfo = () => {
 
     }, [dispatch, id])
 
+    // trending movie video
+    useEffect(() => {
+        
+        axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)
+        .then((res) => {
+            const data = res.data.results;
+            dispatch(video(data))
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+
+    }, [dispatch, id])
+
 
     // trending TVshow details
     useEffect(() => {
@@ -38,6 +53,21 @@ const TrendingInfo = () => {
             dispatch(trendingInfo(data))
             dispatch(genresInfo(data.genres))
             dispatch(languagesInfo(data.spoken_languages))
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+
+    }, [dispatch, id])
+
+
+    // trending TVshow video
+    useEffect(() => {
+        
+        axios.get(`https://api.themoviedb.org/3/tv/${id}/videos?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)
+        .then((res) => {
+            const data = res.data.results;
+            dispatch(video(data))
         })
         .catch((err) => {
             console.log(err);

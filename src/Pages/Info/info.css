@@ -56,7 +56,7 @@
 .info__list p,
 .info__list span{
     color: #FFFFFF;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 400;
     margin: 0 .5rem;
 }
@@ -75,6 +75,10 @@
 }
 @media(min-width:768px) {
     .overview p {
+        font-size: 1rem;
+    }
+    .info__list p,
+    .info__list span {
         font-size: 1rem;
     }
 }
