@@ -23,8 +23,8 @@ const PPersonComponent = ({ val }) => {
             </div>
             ) : (
                 <div className="box">
-                    <div className="">
-                        <img src={noProfile} alt="" width="170px" height="295px" style={{borderRadius: "6px"}} />
+                    <div className="noProfile">
+                        <img src={noProfile} alt=""  />
                     </div>
                 </div>
             )}

@@ -54,7 +54,8 @@ const Navabr = styled.div `
 
     .nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-direction: column;
         align-items: center;
         position: relative;
 
@@ -87,6 +88,11 @@ const Navabr = styled.div `
             font-weight: 500;
             font-family: 'Sen',sans-serif;
             border: none;
+        }
+
+        @media(min-width:320px){
+            justify-content: space-between;
+            flex-direction: row;
         }
     }
 `;
