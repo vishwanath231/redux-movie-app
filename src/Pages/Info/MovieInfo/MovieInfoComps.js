@@ -1,6 +1,7 @@
 import React  from 'react';
 import { useSelector } from 'react-redux'; 
 import { Link } from 'react-router-dom';
+import loading from '../../spinners.gif'
 
 
 
@@ -28,8 +29,10 @@ const MovieInfoComps = () => {
     return (
         <>
             {
-                movie === "" ? (
-                    <h2>loading...</h2>
+                movie === ""  ? (
+                    <div className="spinner">
+                        <img src={loading} alt="" />
+                    </div>
                 ) : (
                     <div className="info__container">
                         <Link to="/home" className="home">Home</Link>

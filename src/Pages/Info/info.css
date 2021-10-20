@@ -1,7 +1,4 @@
-body {
-    /* background: #282C34; */
-    background: #0C111B;
-}
+
 
 .info__container{
     max-width: 1140px;
@@ -41,6 +38,10 @@ body {
     margin: 1rem 0;
 }
 
+.movieInfo__img img{
+    border-radius: 6px;
+}
+
 .info__list{
     display: flex;
     flex-wrap: wrap;
@@ -68,9 +69,14 @@ body {
 
 .overview p {
     color: #FFFFFF;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 400;
     line-height: 1.5rem;
+}
+@media(min-width:768px) {
+    .overview p {
+        font-size: 1rem;
+    }
 }
 
 
@@ -109,8 +115,9 @@ body {
     text-align: center;
     font-weight: 700;
     margin: 2rem 0;
-    color: #fff;
+    color: #ff6a00;
     text-transform: uppercase;
+
 }
 .youtube__video{
     display: flex;
@@ -137,7 +144,7 @@ body {
     text-align: center;
     font-weight: 700;
     margin: 2rem 0;
-    color: #fff;
+    color: #0099cc;
     text-transform: uppercase;
 }
 .season__container{

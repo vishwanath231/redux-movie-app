@@ -2,16 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import noProfile from '../noProfile.jpg'
 
+
 const PPersonComponent = ({ val }) => {
+
+
+    const { id, profile_path, name } = val;
+
     return (
         <>
             {val.known_for_department === "Acting" ? (
                 <div className="box">
-                <Link to={`/person/${val.id}`} className="info__link">
+                <Link to={`/person/${id}`} className="info__link">
                     <div className="info__box">
-                        <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt=""/>
+                        <img src={`https://image.tmdb.org/t/p/w500/${profile_path}`} alt=""/>
                         <div className="inner__box">
-                            <p className="name">{val.name}</p>
+                            <p className="name">{name}</p>
                         </div>
                     </div>
                 </Link>

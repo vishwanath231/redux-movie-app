@@ -38,14 +38,14 @@ const Container = styled.div `
         width: 100%;
         height: 100%;
         /* background-color:rgba(14, 21, 58, .5); */
-        background-color: rgba(12, 17, 27, .7);
+        background-color: rgba(12, 17, 27, .5);
 
         z-index: -1;
     }
 
     .content{
         margin:0 10px;
-        padding: 5rem 0;
+        padding: 6rem 0;
         color: #f5f5f5;
         font-family: 'Ubuntu',sans-serif;
 
@@ -56,7 +56,7 @@ const Container = styled.div `
     .content h1{
         font-size: 40px;
         font-weight: 700;
-        margin-bottom: .3rem;
+        margin-bottom: .5rem;
     }
     .content p{
         font-size: 1.3rem;
