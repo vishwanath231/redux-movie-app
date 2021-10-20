@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { settings } from '../setting/settings';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import spinner from '../spinner.gif';
+import spinner from '../spinners.gif';
 import '../style.css';
 
 const PMovieListing = () => {
