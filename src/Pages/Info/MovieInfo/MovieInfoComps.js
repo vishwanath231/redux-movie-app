@@ -85,16 +85,22 @@ const MovieInfoComps = () => {
                                 <a href={`http://imdb.com/title/${imdb_id}`} target="_blank" className="view__imdb" rel="noreferrer">View IMDB</a>
                             </div>
                         </div>
-                        <div className="youtube_video__title">Video</div>
-                        <div className="youtube__video">
-                            {
-                                movieVideo.map((val) => (
-                                    <div className="video__box" key={val.id}>
-                                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${val.key}`} title={`${val.title}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-                                ))
-                            }
-                        </div>
+                        {
+                            movieVideo.length === 0 ? null : (
+                                <>
+                                    <div className="youtube_video__title">Video</div>
+                                <div className="youtube__video">
+                                    {
+                                        movieVideo.map((val) => (
+                                            <div className="video__box" key={val.id}>
+                                                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${val.key}`} title={`${val.title}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                                </>
+                            )
+                        }
                     </div>
                 )
             }  

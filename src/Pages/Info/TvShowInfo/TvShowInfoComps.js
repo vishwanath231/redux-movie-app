@@ -89,29 +89,39 @@ const TvShowInfoComps = () => {
                             </div>
                         </div>
 
-                        <div className="season__title">Season</div>
-                        <div className="season__container">
-                            { season.map((val) => (
+                        {season.length === 0 ? null : (
+                            <>
+                                <div className="season__title">Season</div>
+                                <div className="season__container">
+                                    { season.map((val) => (
+                                        <>
+                                            { val.name && val.poster_path ? (
+                                                <div className="season__box" key={val.id}>
+                                                    <img src={`https://image.tmdb.org/t/p/w500/${val.poster_path}`} alt="" />
+                                                    <p>{val.name}</p>
+                                                </div>
+                                            ) : null }
+                                        </>
+                                    )) }
+                                </div>
+                            </>
+                        )}
+                        {
+                            video.length === 0 ? null : (
                                 <>
-                                    { val.name && val.poster_path ? (
-                                        <div className="season__box" key={val.id}>
-                                            <img src={`https://image.tmdb.org/t/p/w500/${val.poster_path}`} alt="" />
-                                            <p>{val.name}</p>
-                                        </div>
-                                    ) : null }
-                                </>
-                            )) }
-                        </div>
-                        <div className="youtube_video__title">Video</div>
-                        <div className="youtube__video">
-                            {
-                                video.map((val) => (
-                                    <div className="video__box" key={val.id}>
-                                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${val.key}`} title={`${val.title}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div className="youtube_video__title">Video</div>
+                                    <div className="youtube__video">
+                                        {
+                                            video.map((val) => (
+                                                <div className="video__box" key={val.id}>
+                                                    <iframe width="560" height="315" src={`https://www.youtube.com/embed/${val.key}`} title={`${val.title}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>
+                                            ))
+                                        }
                                     </div>
-                                ))
-                            }
-                        </div>
+                                </>
+                            )
+                        }
                     </div>
                 )
             }  

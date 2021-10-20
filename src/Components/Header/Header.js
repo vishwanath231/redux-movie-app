@@ -45,8 +45,9 @@ const Container = styled.div `
 
     .content{
         margin:0 10px;
-        padding: 4.5rem 0;
+        padding: 5rem 0;
         color: #f5f5f5;
+        font-family: 'Ubuntu',sans-serif;
 
         @media(min-width:768px){
             margin: 0 30px;
@@ -54,10 +55,11 @@ const Container = styled.div `
     }
     .content h1{
         font-size: 40px;
-        font-weight: 600;
+        font-weight: 700;
+        margin-bottom: .3rem;
     }
     .content p{
-        font-size: 25px;
+        font-size: 1.3rem;
         font-weight: 500;
         padding-bottom: 1.5rem;
     }
@@ -105,12 +107,12 @@ const Container = styled.div `
    
     .content h1 {
         font-size: 34px;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: .5rem;
     }
     .content p {
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 500;
     }
     .content .form{
         width: 100%;
