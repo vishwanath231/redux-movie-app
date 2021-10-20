@@ -14,6 +14,7 @@ const TvShowInfoComps = () => {
     const genres = useSelector(state => state.genre.genres)
     const languages = useSelector(state => state.language.languages);
     const season = useSelector(state => state.season.seasons);
+    const cast = useSelector(state => state.tvShowCast.tvShowCasts)
 
 
     const {
@@ -89,10 +90,28 @@ const TvShowInfoComps = () => {
                             </div>
                         </div>
 
+                        {cast.length === 0 ? null : (
+                            <>
+                                <div className="cast__title">CAST</div>
+                                <div className={cast.length > 6 ? "cast__container" : "cast__flexContainer"}>
+                                    { cast.map((val) => (
+                                        <>
+                                            { val.name && val.profile_path ? (
+                                                <div className="cast__box" key={val.id}>
+                                                    <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
+                                                    <p>{val.name}</p>
+                                                </div>
+                                            ) : null }
+                                        </>
+                                    )) }
+                                </div>
+                            </>
+                        )}
+
                         {season.length === 0 ? null : (
                             <>
                                 <div className="season__title">Season</div>
-                                <div className="season__container">
+                                <div className={season.length > 6 ? "season__container" : "season__flexContainer"}>
                                     { season.map((val) => (
                                         <>
                                             { val.name && val.poster_path ? (

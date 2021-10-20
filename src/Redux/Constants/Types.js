@@ -23,3 +23,7 @@ export const GENRES = "GENRES";
 export const LANGUAGES = "LANGUAGES";
 export const SEASON = "SEASON";
 
+
+//CAST
+export const MOVIE_CAST = "MOVIE_CAST";
+export const TVSHOW_CAST = "TVSHOW_CAST";

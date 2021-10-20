@@ -1,5 +1,4 @@
 import React from 'react';
-import google from './google.png'
 import styled from 'styled-components';
 import useForm from './useForm';
 

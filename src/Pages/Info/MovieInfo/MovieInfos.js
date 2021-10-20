@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux'; 
 import { movieInfo, genresInfo, languagesInfo } from '../../../Redux/Actions/InfoAction';
 import { video } from '../../../Redux/Actions/VideoAction';
+import { movieCast } from '../../../Redux/Actions/CastAction'
 import MovieInfoComps from './MovieInfoComps';
 import '../info.css';
 
@@ -43,6 +44,22 @@ const MovieInfos = () => {
         })
 
     }, [dispatch, id])
+
+
+    // cast
+     useEffect(() => {
+        
+        axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)
+        .then((res) => {
+            const data = res.data.cast;
+            dispatch(movieCast(data))
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+
+    }, [dispatch, id])
+
 
 
     return (

@@ -12,6 +12,8 @@ const MovieInfoComps = () => {
     const movieVideo = useSelector(state => state.video.videosInfo);
     const genres = useSelector(state => state.genre.genres);
     const languages = useSelector(state => state.language.languages);
+    const cast = useSelector(state => state.movieCast.movieCasts)
+
 
 
     const {
@@ -88,6 +90,23 @@ const MovieInfoComps = () => {
                                 <a href={`http://imdb.com/title/${imdb_id}`} target="_blank" className="view__imdb" rel="noreferrer">View IMDB</a>
                             </div>
                         </div>
+                        {cast.length === 0 ? null : (
+                            <>
+                                <div className="cast__title">CAST</div>
+                                <div className="cast__container">
+                                    { cast.map((val) => (
+                                        <>
+                                            { val.name && val.profile_path ? (
+                                                <div className="cast__box" key={val.id}>
+                                                    <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
+                                                    <p>{val.name}</p>
+                                                </div>
+                                            ) : null }
+                                        </>
+                                    )) }
+                                </div>
+                            </>
+                        )}
                         {
                             movieVideo.length === 0 ? null : (
                                 <>

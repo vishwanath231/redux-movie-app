@@ -143,40 +143,6 @@
 }
 
 
-.season__title{
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 700;
-    margin: 2rem 0;
-    color: #0099cc;
-    text-transform: uppercase;
-}
-.season__container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.season__container img {
-    width: 170px;
-    border-radius: 6px 6px 0 0;
-}
-
-.season__box {
-    margin: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 6px;
-}
-
-.season__box p {
-    text-align: center;
-    color: #fff;
-    margin: .4rem 0;
-    font-size: .9rem;
-    font-weight: 500;
-}
-
 
 @media(min-width:768px){
     .info__flex {
@@ -198,14 +164,120 @@
     .info__box h3 {
         font-size: 3rem;
     }
-
-    
-    
 }
 
 @media(max-width:768px){
     .video__box {
         width: 100%;
         margin: 0;
+    }
+}
+
+
+
+/*===============================
+            CAST & SEASON
+================================*/
+.cast__title,
+.season__title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 2rem 0;
+    color: #0099cc;
+    text-transform: uppercase;
+}
+.cast__flexContainer,
+.season__flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cast__container,
+.season__container {
+    display: grid;
+}
+
+.cast__box,
+.season__box {
+    margin: 1rem auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 6px;
+}
+.cast__box img,
+.season__box img {
+    width: 170px;
+    border-radius: 6px 6px 0 0;
+}
+
+.cast__box p,
+.season__box p {
+    text-align: center;
+    color: #fff;
+    margin: .4rem 0;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+
+@media(min-width:1200px) {
+    .cast__container,
+    .season__container {
+
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media(max-width:1200px) {
+    .cast__container,
+    .season__container {
+
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media(max-width:1077px) {
+    .cast__container,
+    .season__container {
+
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width:900px) {
+    .cast__container,
+    .season__container {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width:600px) {
+    .cast__container,
+    .season__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cast__box img,
+    .season__box img {
+        width: 140px;
+        border-radius: 6px 6px 0 0;
+    }
+}
+
+
+@media(max-width:480px) {
+    .cast__container,
+    .season__container {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width:320px) {
+    .cast__container,
+    .season__container {
+
+        grid-template-columns: repeat(1, 1fr);
     }
 }

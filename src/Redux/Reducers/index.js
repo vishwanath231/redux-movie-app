@@ -17,6 +17,11 @@ import {
     seasonInfoReducer
 } from './InfoReducer';
 
+import {
+    movieCastReducer,
+    tvShowCastReducer
+} from './CastReducer'
+
 export const reducer = combineReducers({
     PMovies : popularMovieReducer,
     pTv : popularTvReducer,
@@ -30,6 +35,8 @@ export const reducer = combineReducers({
     video: videoReducer,
     genre: genresInfoReducer,
     language: languageInfoReducer,
-    season: seasonInfoReducer
+    season: seasonInfoReducer,
+    movieCast: movieCastReducer,
+    tvShowCast: tvShowCastReducer
 })
 
