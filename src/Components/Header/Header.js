@@ -78,7 +78,7 @@ const Container = styled.div `
         width: 100%;
         border: none;
         outline: none;
-        font-size: 16px;
+        font-size: .9rem;
         font-weight: 500;
         border-radius: 30px;
         padding:12px 12px;
@@ -94,12 +94,13 @@ const Container = styled.div `
         font-family: "poppins",sans-serif;
         border: none;
         outline: none;
-        font-size: 16px;
-        font-weight: 500;
+        font-size: .9rem;
+        font-weight: 600;
         background-color: lightblue;
         padding: 12px;
         border-radius: 30px;
         cursor: pointer;
+        text-transform: uppercase;
     }
 
 
@@ -119,13 +120,14 @@ const Container = styled.div `
     }
     .content .form input{
         padding: 12px 2px;
+        font-size: .9rem;
     }
    
     .flex__container {
         margin: 0 .8rem;
     }
     ::placeholder{
-        font-size: 15px;
+        font-size: .8rem;
     }
 }
 @media(max-width:475px){

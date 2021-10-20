@@ -14,7 +14,7 @@ const Search = () => {
                     name="search"
                     value={searchText.search}
                     onChange={handleChange} 
-                    placeholder="Search for a movies..."
+                    placeholder="search for a movies..."
                     required 
                 />
                 <button type="submit">Search</button>
