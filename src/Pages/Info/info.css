@@ -20,8 +20,8 @@
 }
 
 .info__box h3{
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 600;
     text-align: center;
     margin: 2rem 0;
     color:#ecf2f8;
@@ -38,6 +38,7 @@
 
 .movieInfo__img img{
     border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .info__list{
@@ -117,7 +118,7 @@
     text-align: center;
     font-weight: 700;
     margin: 2rem 0;
-    color: #ff6a00;
+    color: #f4a261;
     text-transform: uppercase;
 
 }
@@ -170,6 +171,15 @@
         margin: 0;
     }
 }
+@media(max-width:600px){
+    .movieInfo__img img{
+        width: 50%;
+    }
+}
+
+
+
+
 
 
 
@@ -187,7 +197,10 @@
     text-transform: uppercase;
 }
 .cast__title{
-    color: #a51890;
+    color: #e9c46a;
+}
+.season__title {
+    color: #219ebc;
 }
 
 .cast__flexContainer,

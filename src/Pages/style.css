@@ -250,11 +250,17 @@
 @media(max-width:480px) {
     .result__box {
 
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media(max-width:340px) {
+@media(max-width:390px) {
+    .result__box {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width:360px) {
     .result__box {
 
         grid-template-columns: repeat(1, 1fr);
