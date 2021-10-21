@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import loading from '../../spinners.gif';
 import noImage from '../../no-image.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretSquareLeft, faHandPointLeft, faHome } from '@fortawesome/free-solid-svg-icons';
 
 
 const MovieInfoComps = () => {
@@ -11,7 +13,7 @@ const MovieInfoComps = () => {
     const movieVideo = useSelector(state => state.video.videosInfo);
     const genres = useSelector(state => state.genre.genres);
     const languages = useSelector(state => state.language.languages);
-    const cast = useSelector(state => state.movieCast.movieCasts)
+    const cast = useSelector(state => state.movieCast.movieCasts);
 
 
 
@@ -36,7 +38,10 @@ const MovieInfoComps = () => {
                     </div>
                 ) : (
                     <div className="info__container">
-                        <Link to="/home" className="home">Home</Link>
+                        <Link to="/home" className="home">
+                            <FontAwesomeIcon icon={faHome} className="icon" />
+                            Home
+                        </Link>
                         <div className="info__box">
                             <h3>{original_title}</h3>
                             <div className="info__flex">
@@ -85,7 +90,10 @@ const MovieInfoComps = () => {
                                 <p>{overview}</p>
                             </div>
                             <div className="btns">
-                                <Link to="/home" className="goHome">Go Back</Link>
+                                <Link to="/home" className="goHome">
+                                    <FontAwesomeIcon icon={["far", "faHandPointLeft"]} />
+                                    Go Back
+                                </Link>
                                 <a href={`http://imdb.com/title/${imdb_id}`} target="_blank" className="view__imdb" rel="noreferrer">View IMDB</a>
                             </div>
                         </div>
