@@ -2,24 +2,27 @@
 <h1 align="center">Movie App</h1>
 
 
-Movie API --> ### `https://developers.themoviedb.org/3/getting-started/introduction`
+### `Movie API` 
+```https://developers.themoviedb.org/3/getting-started/introduction```
 
 
 
-**Features**
-```
-1.GOOGLE SIGN-IN SYSTEM --> FIREBASE
-2.ALL MOVIE INFO
-3.SEARCH FILTER
-4.LOCAL STORAGE
-5.SLIDER
-4.RESPONSIVE DESIGN
-5.ANIMATION
-```
+### `Firebase`
+GOOGLE SIGN-IN SYSTEM
 
+### `Features`
+
+1.ALL MOVIE INFO
+2.SEARCH FILTER
+3.LOCAL STORAGE
+4.SLIDER
+5.RESPONSIVE DESIGN
+6.ANIMATION
 
 
 ### `npm start`
+
+```npm start```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -29,6 +32,8 @@ You will also see any lint errors in the console.
 
 
 ### `npm run build`
+
+```npm run build```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
