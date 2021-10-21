@@ -13,10 +13,12 @@ const SearchInfo = () => {
     
     const dispatch = useDispatch()
 
+    // INITIAL STATE
     const [searchText, setSearchText] = useState({
         search: ''
     })
 
+    // HANDLE CHANGE
     const handleChange = (e) => {
         const { value, name } = e.target;
 
@@ -26,6 +28,8 @@ const SearchInfo = () => {
         })
     }
 
+
+    // HANDLE SUBMIT
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -44,6 +48,7 @@ const SearchInfo = () => {
     }
 
 
+    
     useEffect(() => {
 
         const searchVal = localStorage.getItem('searchText')

@@ -9,7 +9,7 @@ const PPerson = () => {
 
     const dispatch = useDispatch()
 
-    
+    // POPULAR PERSON
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/person/popular?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US&page=1`)

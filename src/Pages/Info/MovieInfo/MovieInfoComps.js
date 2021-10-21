@@ -89,29 +89,35 @@ const MovieInfoComps = () => {
                                 <a href={`http://imdb.com/title/${imdb_id}`} target="_blank" className="view__imdb" rel="noreferrer">View IMDB</a>
                             </div>
                         </div>
-                        {cast.length === 0 ? null : (
-                            <>
-                                <div className="cast__title">CAST</div>
-                                <div className="cast__container">
-                                    { cast.map((val) => (
-                                        <div key={val.id}>
-                                            { val.name && val.profile_path ? (
-                                                <Link to={`/person/${val.id}`} className="cast__link">
+
+                        {/* CAST */}
+                        {
+                            cast.length === 0 ? null : (
+                                <>
+                                    <div className="cast__title">CAST</div>
+                                    <div className="cast__container">
+                                        { cast.map((val) => (
+                                            <div key={val.id}>
+                                                { val.name && val.profile_path ? (
+                                                    <Link to={`/person/${val.id}`} className="cast__link">
+                                                        <div className="cast__box">
+                                                            <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
+                                                            <p>{val.name}</p>
+                                                        </div>
+                                                    </Link>
+                                                ) : (
                                                     <div className="cast__box">
-                                                        <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
-                                                        <p>{val.name}</p>
+                                                        <img src={noImage} alt=""  style={{borderRadius: "6px"}} />
                                                     </div>
-                                                </Link>
-                                            ) : (
-                                                <div className="cast__box">
-                                                    <img src={noImage} alt=""  style={{borderRadius: "6px"}} />
-                                                </div>
-                                            ) }
-                                        </div>
-                                    )) }
-                                </div>
-                            </>
-                        )}
+                                                ) }
+                                            </div>
+                                        )) }
+                                    </div>
+                                </>
+                            )
+                        }
+
+                        {/* VIDEO */}
                         {
                             movieVideo.length === 0 ? null : (
                                 <>

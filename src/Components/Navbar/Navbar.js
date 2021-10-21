@@ -4,16 +4,20 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
+    // INITIAL STATE
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [profile, setProfile] = useState("")
-    const [show, setShow] = useState(false)
-
+    
+    // SCROLL
     const [scrolled, setScrolled] = useState(false)
-
+    
+    // BOX MODEL
+    const [show, setShow] = useState(false)
     const showUserBox = () => setShow(!show)
     
 
+    // STICKY NAV
     const handelScroll = () => {
         const offset=window.scrollY;
 
@@ -27,6 +31,7 @@ const Navbar = () => {
 
     useEffect(() => {
         
+        // GET LOCALSTORAGE
         const loginUsername = localStorage.getItem('loginUsername');
         const loginEmail = localStorage.getItem('loginEmail');
         const loginProfile = localStorage.getItem('loginProfile');

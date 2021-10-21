@@ -23,6 +23,8 @@ import {
     tvShowCastReducer
 } from './CastReducer'
 
+
+// COMBINER REDUCER
 export const reducer = combineReducers({
     PMovies : popularMovieReducer,
     pTv : popularTvReducer,

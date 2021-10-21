@@ -14,6 +14,8 @@ const TvShowInfos = () => {
     
     const { id } = useParams()
 
+
+    // TV SHOW DETAILS
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)
@@ -31,7 +33,7 @@ const TvShowInfos = () => {
     }, [dispatch, id])
 
 
-    // video
+    // TV SHOW VIDEO
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/tv/${id}/videos?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)
@@ -46,7 +48,7 @@ const TvShowInfos = () => {
     }, [dispatch, id])
 
 
-    // cast
+    // TV SHOW CAST
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/tv/${id}/credits?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)

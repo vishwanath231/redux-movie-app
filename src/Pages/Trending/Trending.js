@@ -9,6 +9,8 @@ const Trending = () => {
 
     const dispatch = useDispatch()
 
+
+    // TRENDIND
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a`)

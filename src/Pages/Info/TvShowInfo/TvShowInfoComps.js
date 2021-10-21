@@ -90,47 +90,57 @@ const TvShowInfoComps = () => {
                             </div>
                         </div>
 
-                        {cast.length === 0 ? null : (
-                            <>
-                                <div className="cast__title">CAST</div>
-                                <div className={cast.length > 6 ? "cast__container" : "cast__flexContainer"}>
-                                    { cast.map((val) => (
-                                        <div key={val.id}>
-                                            { val.name && val.profile_path ? (
-                                               <Link to={`/person/${val.id}`} className="cast__link">
+
+                        {/* CAST */}
+                        {
+                            cast.length === 0 ? null : (
+                                <>
+                                    <div className="cast__title">CAST</div>
+                                    <div className={cast.length > 6 ? "cast__container" : "cast__flexContainer"}>
+                                        { cast.map((val) => (
+                                            <div key={val.id}>
+                                                { val.name && val.profile_path ? (
+                                                <Link to={`/person/${val.id}`} className="cast__link">
+                                                        <div className="cast__box">
+                                                            <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
+                                                            <p>{val.name}</p>
+                                                        </div>
+                                                </Link>
+                                                ) : (
                                                     <div className="cast__box">
-                                                        <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
+                                                        <img src={noImage} alt=""  style={{borderRadius: "6px"}} />
+                                                    </div>
+                                                ) }
+                                            </div>
+                                        )) }
+                                    </div>
+                                </>
+                            )
+                        }
+
+                        {/* SEASON */}
+                        {
+                            season.length === 0 ? null : (
+                                <>
+                                    <div className="season__title">Season</div>
+                                    <div className={season.length > 6 ? "season__container" : "season__flexContainer"}>
+                                        { season.map((val) => (
+                                            <>
+                                                { val.name && val.poster_path ? (
+                                                    <div className="season__box" key={val.id}>
+                                                        <img src={`https://image.tmdb.org/t/p/w500/${val.poster_path}`} alt="" />
                                                         <p>{val.name}</p>
                                                     </div>
-                                               </Link>
-                                            ) : (
-                                                <div className="cast__box">
-                                                    <img src={noImage} alt=""  style={{borderRadius: "6px"}} />
-                                                </div>
-                                            ) }
-                                        </div>
-                                    )) }
-                                </div>
-                            </>
-                        )}
+                                                ) : null }
+                                            </>
+                                        )) }
+                                    </div>
+                                </>
+                            )
+                        }
 
-                        {season.length === 0 ? null : (
-                            <>
-                                <div className="season__title">Season</div>
-                                <div className={season.length > 6 ? "season__container" : "season__flexContainer"}>
-                                    { season.map((val) => (
-                                        <>
-                                            { val.name && val.poster_path ? (
-                                                <div className="season__box" key={val.id}>
-                                                    <img src={`https://image.tmdb.org/t/p/w500/${val.poster_path}`} alt="" />
-                                                    <p>{val.name}</p>
-                                                </div>
-                                            ) : null }
-                                        </>
-                                    )) }
-                                </div>
-                            </>
-                        )}
+
+                        {/* VIDEO */}
                         {
                             video.length === 0 ? null : (
                                 <>

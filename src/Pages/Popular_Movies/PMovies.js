@@ -9,6 +9,7 @@ const PMovies = () => {
 
     const dispatch = useDispatch()
 
+    // POPULAR MOVIE
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US&page=1`)

@@ -10,7 +10,7 @@ import {
 } from '../Constants/Types.js';
 
 
-
+// INITIAL STATE
 const movieInfo = {
     movieInfos: []
 }
@@ -30,7 +30,7 @@ export const movieInfoReducer = (state = movieInfo, { type, payload }) => {
 
 
 
-
+// INITIAL STATE
 const tvShowInfo = {
     tvShowInfos: []
 }
@@ -47,7 +47,7 @@ export const tvShowInfoReducer = (state = tvShowInfo, { type, payload }) => {
     }
 }
 
-
+// INITIAL STATE
 const personsInfo = {
     persons: []
 }
@@ -65,7 +65,7 @@ export const personInfoReducer = (state = personsInfo, { type, payload }) => {
 }
 
 
-
+// INITIAL STATE
 const trendingsInfo = {
     trendings: []
 }
@@ -84,7 +84,7 @@ export const trendingInfoReducer = (state = trendingsInfo, { type, payload }) =>
 
 
 
-
+// INITIAL STATE
 const languageInitialState = {
     languages: []
 }
@@ -104,7 +104,7 @@ export const languageInfoReducer = (state = languageInitialState, { type, payloa
 
 
 
-
+// INITIAL STATE
 const genresInfo = {
     genres: []
 }
@@ -122,10 +122,14 @@ export const genresInfoReducer = (state = genresInfo, { type, payload }) => {
 }
 
 
+
+
+// INITIAL STATE
 const seasonInfo = {
     seasons: []
 }
 
+// SEASON INFO REDUCER
 export const seasonInfoReducer = (state = seasonInfo, { type, payload }) => {
     switch (type) {
         case SEASON:
@@ -138,11 +142,12 @@ export const seasonInfoReducer = (state = seasonInfo, { type, payload }) => {
     }
 }
 
-
+// INITIAL STATE
 const personMovieList = {
     personMovieLists: []
 }
 
+// PERSON MOVIE LIST REDUCER
 export const personMovieListReducer = (state = personMovieList, { type, payload }) => {
     switch (type) {
         case PERSON_MOVIE_LIST:

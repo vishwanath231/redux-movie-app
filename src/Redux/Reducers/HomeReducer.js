@@ -7,12 +7,12 @@ import {
 
 
 
-
+// INITIAL STATE
 const PMovie_InitialState =  {
     popularMovies: []
 }
 
-
+// POPULAR MOVIE REDUCER
 export const popularMovieReducer = (state = PMovie_InitialState, { type, payload }) => {
 
     switch (type) {
@@ -27,12 +27,12 @@ export const popularMovieReducer = (state = PMovie_InitialState, { type, payload
 }
 
 
-
+// INITIAL STATE
 const PPerson_InitialState =  {
     popularPerson: []
 }
 
-
+// POPULAR PERSON REDUCER
 export const popularPersonaReducer = (state = PPerson_InitialState, { type, payload }) => {
 
     switch (type) {
@@ -47,12 +47,13 @@ export const popularPersonaReducer = (state = PPerson_InitialState, { type, payl
 }
 
 
-
+// INITIAL STATE
 const PTv_InitialState =  {
     popularTv: []
 }
 
 
+//POPULAR TV SHOW REDUCER
 export const popularTvReducer = (state = PTv_InitialState, { type, payload }) => {
 
     switch (type) {
@@ -68,12 +69,12 @@ export const popularTvReducer = (state = PTv_InitialState, { type, payload }) =>
 
 
 
-
+// INITIAL STATE
 const trending_InitialState =  {
     trendings: []
 }
 
-
+// TRENDING REDUCER
 export const trendingReducer = (state = trending_InitialState, { type, payload }) => {
 
     switch (type) {

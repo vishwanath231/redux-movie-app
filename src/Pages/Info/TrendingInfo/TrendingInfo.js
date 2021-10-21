@@ -13,7 +13,8 @@ const TrendingInfo = () => {
     
     const { id } = useParams()
 
-    // trending Movie details
+
+    // TENDING MOVIE DETAILS
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)
@@ -29,7 +30,8 @@ const TrendingInfo = () => {
 
     }, [dispatch, id])
 
-    // trending movie video
+
+    // TRENDING MOVIE VIDEO 
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)
@@ -44,7 +46,7 @@ const TrendingInfo = () => {
     }, [dispatch, id])
 
 
-    // trending TVshow details
+    // TRENDING TV SHOW DETAILS
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/tv/${id}?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)
@@ -61,7 +63,7 @@ const TrendingInfo = () => {
     }, [dispatch, id])
 
 
-    // trending TVshow video
+    // TRENDING TV SHOW VIDEO
     useEffect(() => {
         
         axios.get(`https://api.themoviedb.org/3/tv/${id}/videos?api_key=0a6e02f4a23c2bedfd64e1ca9ccf492a&language=en-US`)

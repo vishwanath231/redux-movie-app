@@ -3,11 +3,13 @@ import { useHistory } from 'react-router-dom';
 
 const useForm = () => {
 
-
+    // INITIAL STATE
     const [searchText, setSearchText] = useState({
         search: ''
     })
 
+
+    // HANDLE CHANGE
     const handleChange = (e) => {
         const { value, name } = e.target;
 
@@ -18,8 +20,11 @@ const useForm = () => {
     }
 
 
+    // HISTORY
     const history = useHistory();
 
+
+    // HANDLE SUBMIT
     const handleSubmit = (e) => {
         e.preventDefault();
 

@@ -3,6 +3,7 @@ import useForm from './useForm';
 
 const Search = () => {
     
+    // CUSTOM HOOK
     const { handleChange, handleSubmit, searchText } = useForm();
 
     return (
