@@ -2,7 +2,10 @@ import React  from 'react';
 import { useSelector } from 'react-redux'; 
 import { Link } from 'react-router-dom';
 import noImage from '../../no-image.jpg';
-import spinner from '../../spinners.gif'
+import spinner from '../../spinners.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHandPointLeft } from '@fortawesome/free-regular-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 
 const MovieInfoComps = () => {
@@ -29,7 +32,10 @@ const MovieInfoComps = () => {
                     </div>
                 ) : (
                     <div className="info__container">
-                        <Link to="/home" className="home">Home</Link>
+                        <Link to="/home" className="home">
+                            <FontAwesomeIcon icon={faHome} className="icon" />
+                            Home
+                        </Link>
                         <div className="info__box">
                             <h3>{name}</h3>
                             <div className="info__flex">
@@ -59,9 +65,14 @@ const MovieInfoComps = () => {
                                 </div>
                             )}
                             <div className="btns">
-                                <Link to="/home" className="goHome">Go Back</Link>
+                                <Link to="/home" className="goHome">
+                                    <FontAwesomeIcon icon={faHandPointLeft} className="icon" />
+                                    Go Back
+                                </Link>
                             </div>
                         </div>
+
+                        {/* MOVIE LIST  */}
                         {movieList.length === 0 ? (
                             <div className="spinner">
                                 <img src={spinner} alt=""/>

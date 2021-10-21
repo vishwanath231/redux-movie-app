@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import loading from '../../spinners.gif';
 import noImage from '../../no-image.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretSquareLeft, faHandPointLeft, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faHandPointLeft } from '@fortawesome/free-regular-svg-icons';
+import { faExternalLinkAlt, faHome } from '@fortawesome/free-solid-svg-icons'
+
 
 
 const MovieInfoComps = () => {
@@ -91,10 +93,13 @@ const MovieInfoComps = () => {
                             </div>
                             <div className="btns">
                                 <Link to="/home" className="goHome">
-                                    <FontAwesomeIcon icon={["far", "faHandPointLeft"]} />
+                                    <FontAwesomeIcon icon={faHandPointLeft} className="icon" />
                                     Go Back
                                 </Link>
-                                <a href={`http://imdb.com/title/${imdb_id}`} target="_blank" className="view__imdb" rel="noreferrer">View IMDB</a>
+                                <a href={`http://imdb.com/title/${imdb_id}`} target="_blank" className="view__imdb" rel="noreferrer">
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} className="icon" />
+                                    View IMDB
+                                </a>
                             </div>
                         </div>
 

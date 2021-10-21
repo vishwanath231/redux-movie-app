@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import noImage from '../../no-image.jpg';
 import loading from '../../spinners.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHandPointLeft } from '@fortawesome/free-regular-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 
 const TvShowInfoComps = () => {
@@ -34,7 +37,10 @@ const TvShowInfoComps = () => {
                     </div>
                 ) : (
                     <div className="info__container">
-                        <Link to="/home" className="home">Home</Link>
+                        <Link to="/home" className="home">
+                            <FontAwesomeIcon icon={faHome} className="icon" />
+                            Home
+                        </Link>
                         <div className="info__box">
                             <h3>{original_name}</h3>
                             <div className="info__flex">
@@ -86,7 +92,10 @@ const TvShowInfoComps = () => {
                                 <p>{overview}</p>
                             </div>
                             <div className="btns">
-                                <Link to="/home" className="goHome">Go Back</Link>
+                                <Link to="/home" className="goHome">
+                                    <FontAwesomeIcon icon={faHandPointLeft} className="icon" />
+                                    Go Back
+                                </Link>
                             </div>
                         </div>
 

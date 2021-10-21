@@ -29,19 +29,10 @@
     overflow: hidden;
 }
 
-.result__box{
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; */
-    display: grid;
-    padding: 5rem .5rem 0 .5rem;
-}
 
 
-.boxes{
-    margin: 1rem auto;
-}
+
+
 
 
 
@@ -203,7 +194,23 @@
 
 
 
-/* SEARCH MEDIA QUERY */
+/* SEARCH */
+
+.result__box {
+    display: grid;
+    padding: 5rem .5rem 0 .5rem;
+}
+
+.result__Flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes {
+    margin: 1rem auto;
+}
 
 @media(min-width:1200px) {
     .result__box {
