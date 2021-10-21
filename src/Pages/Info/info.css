@@ -24,7 +24,7 @@
     font-weight: 700;
     text-align: center;
     margin: 2rem 0;
-    color: #fff;
+    color:#ecf2f8;
 }
 
 .info__flex{
@@ -181,11 +181,15 @@
 .personMovie__title {
     font-size: 2rem;
     text-align: center;
-    font-weight: 700;
+    font-weight: 800;
     margin: 2rem 0;
     color: #0099cc;
     text-transform: uppercase;
 }
+.cast__title{
+    color: #a51890;
+}
+
 .cast__flexContainer,
 .season__flexContainer,
 .personMovie__flexContainer {
