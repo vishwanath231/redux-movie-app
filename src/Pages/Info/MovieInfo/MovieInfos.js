@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux'; 
 import { movieInfo, genresInfo, languagesInfo } from '../../../Redux/Actions/InfoAction';
 import { video } from '../../../Redux/Actions/VideoAction';
-import { movieCast } from '../../../Redux/Actions/CastAction'
+import { movieCast } from '../../../Redux/Actions/CastAction';
 import MovieInfoComps from './MovieInfoComps';
 import '../info.css';
 

@@ -14,7 +14,8 @@ import {
     trendingInfoReducer,
     genresInfoReducer,
     languageInfoReducer,
-    seasonInfoReducer
+    seasonInfoReducer,
+    personMovieListReducer
 } from './InfoReducer';
 
 import {
@@ -37,6 +38,7 @@ export const reducer = combineReducers({
     language: languageInfoReducer,
     season: seasonInfoReducer,
     movieCast: movieCastReducer,
-    tvShowCast: tvShowCastReducer
+    tvShowCast: tvShowCastReducer,
+    personMovieList: personMovieListReducer
 })
 

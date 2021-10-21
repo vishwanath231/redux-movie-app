@@ -6,10 +6,13 @@ import {
     SEARCH_INFO,
     GENRES,
     LANGUAGES,
-    SEASON
+    SEASON,
+    PERSON_MOVIE_LIST
 } from '../Constants/Types';
 
 
+
+// MOVIE INFO
 export const movieInfo = (data) => {
     return {
         type:MOVIE_INFO,
@@ -18,6 +21,7 @@ export const movieInfo = (data) => {
 }
 
 
+// TV SHOW INFO
 export const tvShowInfo = (data) => {
     return {
         type:TVSHOW_INFO,
@@ -26,6 +30,7 @@ export const tvShowInfo = (data) => {
 }
 
 
+// PERSON INFO
 export const personInfo = (data) => {
     return {
         type:PERSON_INFO,
@@ -34,6 +39,7 @@ export const personInfo = (data) => {
 }
 
 
+// TRENDING INFO
 export const trendingInfo = (data) => {
     return {
         type:TRENDING_INFO,
@@ -42,6 +48,8 @@ export const trendingInfo = (data) => {
 }
 
 
+
+// SEARCH INFO
 export const searchInfo = (data) => {
     return {
         type:SEARCH_INFO,
@@ -49,6 +57,8 @@ export const searchInfo = (data) => {
     }
 }
 
+
+// GENRES INFO
 export const genresInfo = (data) => {
     return {
         type:GENRES,
@@ -57,6 +67,7 @@ export const genresInfo = (data) => {
 }
 
 
+// LANGUAGES INFO
 export const languagesInfo = (data) => {
     return {
         type:LANGUAGES,
@@ -64,6 +75,8 @@ export const languagesInfo = (data) => {
     }
 }
 
+
+// SEASON INFO
 export const seasonInfo = (data) => {
     return {
         type:SEASON,
@@ -72,3 +85,11 @@ export const seasonInfo = (data) => {
 }
 
 
+
+// PERSON MOVIE LIST
+export const personMovieList = (data) => {
+    return {
+        type: PERSON_MOVIE_LIST,
+        payload: data
+    }
+}

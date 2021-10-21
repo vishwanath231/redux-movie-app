@@ -1,9 +1,8 @@
 import React  from 'react';
 import { useSelector } from 'react-redux'; 
 import { Link } from 'react-router-dom';
-import loading from '../../spinners.gif'
-
-
+import loading from '../../spinners.gif';
+import noImage from '../../no-image.jpg';
 
 
 const MovieInfoComps = () => {
@@ -95,14 +94,20 @@ const MovieInfoComps = () => {
                                 <div className="cast__title">CAST</div>
                                 <div className="cast__container">
                                     { cast.map((val) => (
-                                        <>
+                                        <div key={val.id}>
                                             { val.name && val.profile_path ? (
-                                                <div className="cast__box" key={val.id}>
-                                                    <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
-                                                    <p>{val.name}</p>
+                                                <Link to={`/person/${val.id}`} className="cast__link">
+                                                    <div className="cast__box">
+                                                        <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
+                                                        <p>{val.name}</p>
+                                                    </div>
+                                                </Link>
+                                            ) : (
+                                                <div className="cast__box">
+                                                    <img src={noImage} alt=""  style={{borderRadius: "6px"}} />
                                                 </div>
-                                            ) : null }
-                                        </>
+                                            ) }
+                                        </div>
                                     )) }
                                 </div>
                             </>

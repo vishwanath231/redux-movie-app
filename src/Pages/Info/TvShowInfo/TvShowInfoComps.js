@@ -1,13 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux'; 
 import { Link } from 'react-router-dom';
-
-
+import noImage from '../../no-image.jpg';
+import loading from '../../spinners.gif';
 
 
 const TvShowInfoComps = () => {
-
-
 
     const tvShow = useSelector(state => state.tvShowInfo.tvShowInfos);
     const video = useSelector(state => state.video.videosInfo);
@@ -31,7 +29,9 @@ const TvShowInfoComps = () => {
         <>
             {
                 tvShow === "" ? (
-                    <h2>loading...</h2>
+                    <div className="spinner">
+                        <img src={loading} alt="" />
+                    </div>
                 ) : (
                     <div className="info__container">
                         <Link to="/home" className="home">Home</Link>
@@ -95,14 +95,20 @@ const TvShowInfoComps = () => {
                                 <div className="cast__title">CAST</div>
                                 <div className={cast.length > 6 ? "cast__container" : "cast__flexContainer"}>
                                     { cast.map((val) => (
-                                        <>
+                                        <div key={val.id}>
                                             { val.name && val.profile_path ? (
-                                                <div className="cast__box" key={val.id}>
-                                                    <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
-                                                    <p>{val.name}</p>
+                                               <Link to={`/person/${val.id}`} className="cast__link">
+                                                    <div className="cast__box">
+                                                        <img src={`https://image.tmdb.org/t/p/w500/${val.profile_path}`} alt="" />
+                                                        <p>{val.name}</p>
+                                                    </div>
+                                               </Link>
+                                            ) : (
+                                                <div className="cast__box">
+                                                    <img src={noImage} alt=""  style={{borderRadius: "6px"}} />
                                                 </div>
-                                            ) : null }
-                                        </>
+                                            ) }
+                                        </div>
                                     )) }
                                 </div>
                             </>

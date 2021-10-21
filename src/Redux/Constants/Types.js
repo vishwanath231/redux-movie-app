@@ -27,3 +27,6 @@ export const SEASON = "SEASON";
 //CAST
 export const MOVIE_CAST = "MOVIE_CAST";
 export const TVSHOW_CAST = "TVSHOW_CAST";
+
+
+export const PERSON_MOVIE_LIST = "PERSON_MOVIE_LIST";

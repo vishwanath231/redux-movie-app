@@ -7,6 +7,8 @@ import {
 } from '../Constants/Types.js';
 
 
+
+// DISPLAY POPULAR MOVIE
 export const popularMovie = (PMovies) => {
     return {
         type: POPULAR_MOVIE,
@@ -15,6 +17,7 @@ export const popularMovie = (PMovies) => {
 }
 
 
+// DISPLAY POPULAR TV SHOW
 export const popularTv = (PTv) => {
     return {
         type: POPULAR_TV,
@@ -23,6 +26,8 @@ export const popularTv = (PTv) => {
 }
 
 
+
+// DISPLAY POPULAR PERSON
 export const popularPerson = (person) => {
     return {
         type: POPULAR_PERSON,
@@ -30,6 +35,8 @@ export const popularPerson = (person) => {
     }
 }
 
+
+// DISPLAY TRENDING
 export const trending = (trends) => {
     return {
         type: TRENDING,
@@ -37,6 +44,8 @@ export const trending = (trends) => {
     }
 }
 
+
+// DISPLAY SEARCH DATA
 export const searchData = (data) => {
     return {
         type: SEARCH_DATA,

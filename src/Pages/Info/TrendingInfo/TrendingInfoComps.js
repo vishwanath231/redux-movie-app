@@ -1,7 +1,7 @@
 import React  from 'react';
 import { useSelector } from 'react-redux'; 
 import { Link } from 'react-router-dom';
-
+import loading from '../../spinners.gif';
 
 
 
@@ -11,7 +11,6 @@ const MovieInfoComps = () => {
     const video = useSelector(state => state.video.videosInfo);
     const genres = useSelector(state => state.genre.genres);
     const languages = useSelector(state => state.language.languages);
-
 
     const {
         original_title,
@@ -32,7 +31,9 @@ const MovieInfoComps = () => {
         <>
             {
                 trending === "" ? (
-                    <h2>loading...</h2>
+                    <div className="spinner">
+                        <img src={loading} alt="" />
+                    </div>
                 ) : (
                     <div className="info__container">
                         <Link to="/home" className="home">Home</Link>
@@ -116,6 +117,7 @@ const MovieInfoComps = () => {
                                 }
                             </div>
                         </div>
+                        
                         {
                             video.length === 0 ? null : (
                                 <>

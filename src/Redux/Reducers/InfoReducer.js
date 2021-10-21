@@ -5,7 +5,8 @@ import {
     TRENDING_INFO,
     LANGUAGES,
     GENRES,
-    SEASON
+    SEASON,
+    PERSON_MOVIE_LIST
 } from '../Constants/Types.js';
 
 
@@ -131,6 +132,24 @@ export const seasonInfoReducer = (state = seasonInfo, { type, payload }) => {
             return{
                 ...state,
                 seasons: payload
+            }
+        default:
+            return state;
+    }
+}
+
+
+const personMovieList = {
+    personMovieLists: []
+}
+
+export const personMovieListReducer = (state = personMovieList, { type, payload }) => {
+    switch (type) {
+        case PERSON_MOVIE_LIST:
+            return{
+                ...state,
+                personMovieLists: payload
+
             }
         default:
             return state;

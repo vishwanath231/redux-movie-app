@@ -179,7 +179,8 @@
             CAST & SEASON
 ================================*/
 .cast__title,
-.season__title {
+.season__title,
+.personMovie__title {
     font-size: 2rem;
     text-align: center;
     font-weight: 700;
@@ -188,7 +189,8 @@
     text-transform: uppercase;
 }
 .cast__flexContainer,
-.season__flexContainer {
+.season__flexContainer,
+.personMovie__flexContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -196,35 +198,49 @@
 }
 
 .cast__container,
-.season__container {
+.season__container,
+.personMovie__container {
     display: grid;
+    grid-gap: 1em;
 }
 
+.personMovie__flexContainer .personMovie__box {
+    margin: 1rem;
+}
 .cast__box,
-.season__box {
+.season__box,
+.personMovie__box {
     margin: 1rem auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 6px;
 }
 .cast__box img,
-.season__box img {
+.season__box img,
+.personMovie__box img{
     width: 170px;
     border-radius: 6px 6px 0 0;
 }
 
 .cast__box p,
-.season__box p {
+.season__box p,
+.personMovie__box p {
     text-align: center;
     color: #fff;
-    margin: .4rem 0;
+    padding: .4rem 0;
     font-size: .9rem;
     font-weight: 500;
+}
+
+.cast__link,
+.personMovie__link {
+    text-decoration: none;
 }
 
 
 @media(min-width:1200px) {
     .cast__container,
-    .season__container {
+    .season__container,
+    .personMovie__container {
 
         grid-template-columns: repeat(6, 1fr);
     }
@@ -232,7 +248,8 @@
 
 @media(max-width:1200px) {
     .cast__container,
-    .season__container {
+    .season__container,
+    .personMovie__container {
 
         grid-template-columns: repeat(5, 1fr);
     }
@@ -240,7 +257,8 @@
 
 @media(max-width:1077px) {
     .cast__container,
-    .season__container {
+    .season__container,
+    .personMovie__container {
 
         grid-template-columns: repeat(4, 1fr);
     }
@@ -248,7 +266,8 @@
 
 @media(max-width:900px) {
     .cast__container,
-    .season__container {
+    .season__container,
+    .personMovie__container {
 
         grid-template-columns: repeat(3, 1fr);
     }
@@ -256,11 +275,13 @@
 
 @media(max-width:600px) {
     .cast__container,
-    .season__container {
+    .season__container,
+    .personMovie__container {
         grid-template-columns: repeat(3, 1fr);
     }
     .cast__box img,
-    .season__box img {
+    .season__box img,
+    .personMovie__box img {
         width: 140px;
         border-radius: 6px 6px 0 0;
     }
@@ -269,14 +290,16 @@
 
 @media(max-width:480px) {
     .cast__container,
-    .season__container {
+    .season__container,
+    .personMovie__container {
 
         grid-template-columns: repeat(2, 1fr);
     }
 }
 @media(max-width:320px) {
     .cast__container,
-    .season__container {
+    .season__container,
+    .personMovie__container {
 
         grid-template-columns: repeat(1, 1fr);
     }

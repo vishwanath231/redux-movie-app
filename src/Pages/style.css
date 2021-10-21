@@ -162,6 +162,26 @@
         height: 250px;
     }
 }
+@media(max-width:480px) {
+    .box {
+        width: 110px;
+    }
+    .info__box img {
+        width: 110px;
+        height: auto;
+    }
+}
+@media(max-width:390px) {
+    .box {
+        width: 150px;
+    }
+    .info__box img {
+        width: 150px;
+        height: auto;
+    }
+}
+
+
 
 @media(min-width:768px){
     .slick-prev:before,

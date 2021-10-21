@@ -76,6 +76,7 @@ const TrendingInfo = () => {
     }, [dispatch, id])
 
 
+
     return (
         <>
             <TrendingInfoComps />
