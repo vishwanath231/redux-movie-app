@@ -7,19 +7,20 @@
 https://developers.themoviedb.org/3/getting-started/introduction
 ```
 
-
+### `STATE MANAGEMENT`
+Redux
 
 ### `Firebase`
 GOOGLE SIGN-IN SYSTEM
 
 ### `Features`
 
-1.ALL MOVIE INFO
-2.SEARCH FILTER
-3.LOCAL STORAGE
-4.SLIDER
-5.RESPONSIVE DESIGN
-6.ANIMATION
+1.ALL MOVIE INFO <br/>
+2.SEARCH FILTER <br/>
+3.LOCAL STORAGE <br/>
+4.SLIDER <br/>
+5.RESPONSIVE DESIGN <br/>
+6.ANIMATION <br/>
 
 
 ### `npm start`
