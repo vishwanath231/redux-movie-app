@@ -7,8 +7,8 @@
 .container h2 {
     font-size: 1.2rem;
     font-weight: 500;
-    /* color: #0D121C; */
-    color: #FFFFFF;
+    color: #0D121C;
+    /* color: #FFFFFF; */
     font-family: 'Ubuntu',
     sans-serif;
 }
@@ -124,6 +124,7 @@
 .slick-prev:before,
 .slick-next:before {
     font-size: 30px;
+    color: #0D121C;
 }
 .spinner {
     text-align: center;
@@ -196,6 +197,7 @@
 
     .container h2 {
         font-size: 1.4rem;
+        font-weight: 600;
     }
 }
 

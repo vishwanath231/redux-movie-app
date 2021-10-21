@@ -15,5 +15,6 @@ const Home = () => {
 export default Home;
 
 const Container = styled.div `
-    background: #0C111B;
+    background: #fff;
+    /* background: #0C111B; */
 `;
