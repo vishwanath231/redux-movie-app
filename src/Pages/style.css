@@ -155,10 +155,10 @@
 }
 @media(max-width:480px) {
     .box {
-        width: 180px;
+        width: 170px;
     }
     .info__box img {
-        width: 180px;
+        width: 170px;
         height: auto;
     }
 }
